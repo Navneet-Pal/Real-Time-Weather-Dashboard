@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="container">
+
+            <h1 class="mainHeading">WEATHER APP</h1>
+
+            <!--YEH CHOOSING OPTIONS HAI -->
+            <div class="chooseSection">
+                <p data-urWeather>Your Weather</p>
+                <p data-searchWeath>Search Weather</p>
+            </div>
+
+
+            <!--GRANT ACCESS WALA INTERFACE-->
+            <div class="grantAccInterface" data-grantAccessDiv>
+
+                <img src="./images/location.png" alt="" height="100" width="100">
+                <h1 class="grantMainHeading">Grant Location Access</h1>
+                <p class="grantSubHeading">Allow Access to get weather information</p>
+                <button class="grantBtn" onclick="grantAccBtn()">GRANT ACCESS</button>
+
+            </div>
+
+
+            <!--SEARCH WEATHER KA INTERFACE-->
+            <div class="searchBarDiv" data-searchingBarDiv>
+
+                <input type="text" class="searchBar" data-searchingBar placeholder="Search for City...">
+                <button class="searchBtn" onclick="searchKaro()"><img src="./images/search.png" alt="" width="23px"></button>
+
+            </div>
+
+
+            <!--YOUR WEATHER KA INTERFACE HAI YEH-->
+            <div class="detailsSection" data-detailSecDiv>
+
+                <div class="cityDiv">
+                    <p data-placeName class="placeName">Gautam Budh Nagar</p>
+                    <img src="" alt="" data-countryImg width="50px" height="40px">
+                </div>
+                <p data-skyUpdate class="skyupd">few clouds</p>
+                <img src="" alt="" data-skyUpdatePic width="90px" height="90px"> 
+                <p data-temp class="temperature">24.16 °C</p>
+
+                <div class="extraDetails">
+
+                    <div class="boxes">
+    
+                        <img src="./images/wind.png" alt="" height="70px" width="70px" >
+                        <p class="whcFont">WINDSPEED</p>
+                        <p data-windSpeedPercentage>2.75 m/s</p>
+                        
+                    </div>
+                    <div class="boxes ">
+    
+                        <img src="./images/humidity.png" alt="" height="50px" width="50px" style="margin-top: 9px;">
+                        <p class="humiditysec whcFont">HUMIDITY</p>
+                        <p data-humidityPercentage>2.75 m/s</p>
+                        
+                    </div>
+                    <div class="boxes">
+    
+                        <img src="./images/cloud.png" alt="" height="70px" width="60px">
+                        <p class="whcFont">CLOUDS</p>
+                        <p data-cloudPercentage>2.75 m/s</p>
+                        
+                    </div>
+    
+                </div>
+
+            </div>
+
+
+            <!--LOADING SECTION-->
+            <div class="loadingSection" data-loaderDiv>
+
+                <img src="./images/loading.gif" alt="" width="190px" >
+                <p>LOADING</p>
+
+            </div>
+
+            <!--NOT FOUND IMAGE-->
+            <div class="notFoundImg" data-notFound>
+
+                <img src="./images/not-found.png" alt="" height="200px" width="200px">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
